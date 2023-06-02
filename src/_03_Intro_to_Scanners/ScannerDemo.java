@@ -25,14 +25,16 @@ public class ScannerDemo {
          * are running your program or the input/output stream you are using.
          */
 
-        
+        Scanner scan = new Scanner(System.in);
+    	
+    	
+    	
         
         /*
          * 2. Use a syso to ask the user for their name and then use the Scanner
          * created in step 1 to take in the user's name as a String.
          * 
-         * You can use either next() or nextLine(). next() will take in all
-         * string input until it reaches a space. nextLine will take in all
+         * You can use either next() or nextLine(). next() will . nextLine will take in all
          * string input until it reaches a newline.
          * 
          * You should see a blinking cursor in the console that you can type
@@ -42,7 +44,11 @@ public class ScannerDemo {
          * String variable.
          */
 
+        System.out.println("WhaT iS yOUr NaME?!?");
         
+        String name = scan.nextLine();
+        
+        System.out.println("YOuR nAME Is thIs: " + name);
         
         /*
          * 3. Ask the user for their age in the console. Then use the Scanner to
@@ -52,7 +58,11 @@ public class ScannerDemo {
          * on Integer.parseInt().
          */
 
+        System.out.println("What is your age?");
         
+        int age = scan.nextInt();
+        
+        System.out.println("Your age is  " + age);
         
         /*
          * 4.) Try asking the user for another piece of information that's not a
@@ -72,6 +82,8 @@ public class ScannerDemo {
          * Note: When using a Scanner with the System.in input stream in larger
          * programs only close the scanner when your program is completely done.
          */
+        
+        scan.close();
 
     }
 
