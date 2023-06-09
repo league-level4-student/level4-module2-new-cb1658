@@ -12,7 +12,7 @@ public class DoWhileDemo {
      * You can use a do-while loop to avoid code repetition in many situations
      * where a while loop's condition is dependent on initialization of a
      * variable declared right before the loop.
-     */
+     */ 
 
     public static void main(String[] args) {
 
@@ -39,12 +39,13 @@ public class DoWhileDemo {
          * loop so it will compile and work as expected.
          */
 
-        Random rand = new Random();
+        
 
         String again;
 
-        while (again.equals("y")) {
-            int flip = rand.nextInt(2);
+        do {
+        	Random rand = new Random();
+        	int flip = rand.nextInt(2);
             String coin;
 
             if (flip == 1)
@@ -56,7 +57,9 @@ public class DoWhileDemo {
 
             System.out.print("Would you like to flip again (y/n)? ");
             again = scan.next();
-        }
+        }while(again.equals("y"));
+        
+      
 
         scan.close();
     }
